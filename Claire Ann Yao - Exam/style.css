@@ -153,9 +153,16 @@ header {
     }
 }
 
+.steps123 {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
 .steps {
     max-width: 100%;
     height: auto;
+    text-align: center;
 }
 
 .circle {
@@ -163,7 +170,7 @@ header {
     max-width: 100%;
     height: auto;
     left: 27.8%;
-    top: 33%; 
+    top: 36%; 
     -webkit-animation: spin 1s linear infinite;
     -moz-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
@@ -174,7 +181,7 @@ header {
     max-width: 100%;
     height: auto;
     left: 46.5%;
-    top: 33%;
+    top: 36%;
     -webkit-animation: spin 1s linear infinite;
     -moz-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
@@ -185,7 +192,7 @@ header {
     max-width: 100%;
     height: auto;
     left: 64.8%;
-    top: 33%;
+    top: 36%;
     -webkit-animation: spin 1s linear infinite;
     -moz-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
@@ -207,19 +214,19 @@ header {
     text-align: left;
     position: absolute;
     left: 30%;
-    top: 5%;
+    top: 6%;
 }
 
 .steps-text h1 {
-    font-size: small;
+    font-size: 100%;
     font-family: "BreuerFont";
     color: #fff;
 }
 
 .column {
     float: left;
-    width: 1000%;
-    padding: 100px;
+    max-width: 100%;
+    padding: 6vw;
     box-sizing: border-box;
 }
 
@@ -262,9 +269,16 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 98%;
+  max-width: 80%;
+  height: auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: top 0.3s ease-in-out; /* Animation for the content slide up */
+}
+
+.expandable-content h1 {
+    font-size: 100%;
+    font-family: "BreuerFont";
+    color: #fff;
 }
 
 .expandable-link.expanded::after {
