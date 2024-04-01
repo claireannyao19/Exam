@@ -227,8 +227,9 @@ footer {
     display: flex;
     text-align: left;
     position: absolute;
-    left: 30%;
-    top: 6%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .steps-text h1 {
@@ -240,8 +241,10 @@ footer {
 .column {
     float: left;
     max-width: 100%;
-    padding: 6vw;
+    padding: 5vw;
     box-sizing: border-box;
+    margin-left: 10%;
+    margin-top: 10%;
 }
 
 .about {
