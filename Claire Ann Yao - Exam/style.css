@@ -40,6 +40,8 @@
 
 body {
     background-image: url("images/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -64,7 +66,7 @@ header {
 }
   
 .banner img {
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
 }
 
@@ -163,39 +165,38 @@ header {
     max-width: 100%;
     height: auto;
     text-align: center;
+    position: relative;
+}
+
+
+.steps-animation {
+    position: absolute;
+    top: 50%; /* Adjust top position */
+    left: 50%; /* Adjust left position */
+    transform: translate(-50%, -50%); /* Center the animation */
+    
+}
+
+.circle, .circle2, .circle3 {
+    position: absolute;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    animation: spin  1s linear infinite;
 }
 
 .circle {
-    position: absolute;
-    max-width: 100%;
-    height: auto;
-    left: 27.8%;
-    top: 36%; 
-    -webkit-animation: spin 1s linear infinite;
-    -moz-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite;
+    top: -57px;
+    right: 235px;
 }
 
 .circle2 {
-    position: absolute;
-    max-width: 100%;
-    height: auto;
-    left: 46.5%;
-    top: 36%;
-    -webkit-animation: spin 1s linear infinite;
-    -moz-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite;
+    top: -57px;
+    left: -58px;
 }
 
 .circle3 {
-    position: absolute;
-    max-width: 100%;
-    height: auto;
-    left: 64.8%;
-    top: 36%;
-    -webkit-animation: spin 1s linear infinite;
-    -moz-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite;
+    top: -57px;
+    left: 236px;
 }
   
 @-webkit-keyframes spin {
