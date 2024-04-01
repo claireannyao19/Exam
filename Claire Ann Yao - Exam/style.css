@@ -60,6 +60,19 @@ header {
     gap: 1rem;
 }
 
+footer {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.termsandcondition {
+    display: flex;
+    gap: 1rem;
+}
+
 .banner {
     position: relative;
     text-align: center;
@@ -171,9 +184,9 @@ header {
 
 .steps-animation {
     position: absolute;
-    top: 50%; /* Adjust top position */
-    left: 50%; /* Adjust left position */
-    transform: translate(-50%, -50%); /* Center the animation */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
 }
 
@@ -235,7 +248,7 @@ header {
     text-align: center;
     margin-top: 13%;
     float: left;
-    margin-left: 38%;
+    margin-left: 35%;
 }
 
 .expandable-link {
@@ -270,7 +283,7 @@ header {
   position: absolute;
   top: 100%;
   left: 0;
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: top 0.3s ease-in-out; /* Animation for the content slide up */
@@ -293,7 +306,7 @@ header {
 
 .termsandcondition {
     text-align: center;
-    margin-top: 13%;
+    margin-top: 13.7%;
     float: right;
     margin-right: 38%;
 }
