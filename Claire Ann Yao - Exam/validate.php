@@ -1,35 +1,24 @@
 <?php
+$email = isset($_POST['email']) ? trim($_POST['email']) : '';
 
-// Function to validate email address
-function validateEmail($email) {
-  return filter_var($email, FILTER_VALIDATE_EMAIL);
-}
+$isValid = filter_var($email, FILTER_VALIDATE_EMAIL);
 
-// Get email from form submission
-$email = $_POST['email'];
+$response = array(
+  "error" => !$isValid,
+  "message" => $isValid ? "Email validated" : "Email is not valid"
+);
 
-// Validate email
-$isValid = validateEmail($email);
+// Log validation attempt
+$logData = array(
+  date("Y/m/d"),
+  date("H:i:s"),
+  $email,
+  $isValid ? "true" : "false"
+);
 
-// Prepare log data
-$dateTime = date("Y/m/d, H:i:s");
-$result = $isValid ? "true" : "false";
+$log = fopen("log.csv", "a"); // Open log file in append mode
+fputcsv($log, $logData); // Write log data to CSV file
+fclose($log);
 
-// Create log string
-$logLine = "$dateTime, $email, $result\n";
-
-// Open log file in append mode (a)
-$logFile = fopen("log.csv", "a");
-
-// Write log data to file
-if ($logFile) {
-  fwrite($logFile, $logLine);
-  fclose($logFile);
-  
-  // Display success message
-  echo "Email validation result logged. Your email is " . ($isValid ? "valid" : "invalid");
-} else {
-  echo "Error creating log file.";
-}
-
+echo json_encode($response);
 ?>

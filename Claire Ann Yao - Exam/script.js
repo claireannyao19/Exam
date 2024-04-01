@@ -19,31 +19,11 @@ expandableLinks.forEach(link => {
 });
 
 
+const button = document.getElementById("bet-button");
 
-$(document).ready(function() {
-  $("#email").blur(function() {
-    var email = $(this).val();
-    validateEmail(email);
-  });
-
-  function validateEmail(email) {
-    $.ajax({
-      url: "validate_email.php", // Replace with your actual script path
-      method: "POST",
-      data: { email: email },
-      dataType: "json",
-      success: function(response) {
-        var messageSpan = $("#email-message");
-        messageSpan.text(response.message);
-        if (response.error) {
-          messageSpan.css("color", "red");
-        } else {
-          messageSpan.css("color", "green");
-        }
-      },
-      error: function(jqXHR, textStatus, errorThrown) {
-        console.error("Error:", textStatus, errorThrown);
-      }
-    });
+button.addEventListener("click", function() {
+  const email = prompt("Enter your email address:");
+  if (email) {
+    window.location.href = `http://www.coral.co.uk/register?email=${email}`;
   }
 });
