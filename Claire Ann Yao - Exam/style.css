@@ -139,6 +139,7 @@ footer {
     width: 100%;
     margin: 0%;
     margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .bet-button {
@@ -179,6 +180,7 @@ footer {
     height: auto;
     text-align: center;
     position: relative;
+    margin-top: 70px;
 }
 
 
@@ -241,17 +243,21 @@ footer {
 .column {
     float: left;
     max-width: 100%;
-    padding: 5vw;
+    padding: 78px;
     box-sizing: border-box;
     margin-left: 10%;
     margin-top: 10%;
 }
 
+.gamble-aware {
+    position: relative;
+}
+
 .about {
     text-align: center;
-    margin-top: 13%;
+    margin-top: 26.3%;
     float: left;
-    margin-left: 35%;
+    margin-left: 32%;
 }
 
 .expandable-link {
@@ -309,9 +315,9 @@ footer {
 
 .termsandcondition {
     text-align: center;
-    margin-top: 13.7%;
+    margin-top: 27%;
     float: right;
-    margin-right: 38%;
+    margin-right: 33%;
 }
 
 .open-terms {

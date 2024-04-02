@@ -20,10 +20,23 @@ expandableLinks.forEach(link => {
 
 
 const button = document.getElementById("bet-button");
+const emailField = document.getElementById("email");
 
 button.addEventListener("click", function() {
+  // Check for empty email
+  const email = emailField.value.trim();
+  if (email === "") {
+      alert("Please enter your email address before clicking the button.");
+      event.preventDefault();
+      return;
+  }
+
+  const button = document.getElementById("bet-button");
+
+  button.addEventListener("click", function() {
   const email = prompt("Enter your email address:");
   if (email) {
     window.location.href = `http://www.coral.co.uk/register?email=${email}`;
   }
+});
 });
